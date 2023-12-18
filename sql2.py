@@ -28,3 +28,7 @@ OrderCount DESC;
 
 cursor = conn.cursor()
 cursor.execute(SQL_QUERY)
+
+records = cursor.fetchall()
+for r in records:
+    print(f"{r.CustomerID}\t{r.OrderCount}\t{r.CompanyName}")
